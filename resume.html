@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>個人履歷</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h2>劉祐君</h2>
+    <p>亞洲大學學生</p>
+    <p>學號：114024052</p>
+
+    <button onclick="showMsg()">點我</button>
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    function showMsg() {
+      document.getElementById("msg").innerText = "你好！這是我的個人履歷";
+    }
+  </script>
+
+</body>
+</html>
