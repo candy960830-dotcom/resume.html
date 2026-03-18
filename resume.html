@@ -2,53 +2,153 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>個人履歷</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人履歷 - 114024052</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      text-align: center;
+      font-family: "Microsoft JhengHei", sans-serif;
       margin: 0;
+      background: #f5f7fa;
+      color: #333;
     }
 
-    .card {
-      background: white;
-      width: 300px;
-      margin: 100px auto;
+    header {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      border-left: 5px solid #4facfe;
+      padding-left: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #4facfe;
+      color: white;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 0.9rem;
     }
 
     button {
-      margin-top: 10px;
-      padding: 8px 12px;
+      padding: 10px 15px;
       border: none;
-      background: #007bff;
+      background: #4facfe;
       color: white;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+    }
+
+    button:hover {
+      background: #007bff;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="card">
-    <h2>劉祐君</h2>
-    <p>亞洲大學學生</p>
-    <p>學號：114024052</p>
+<header>
+  <h1>劉祐辰</h1>
+  <p>亞洲大學學生 | 學號：114024052</p>
+</header>
 
-    <button onclick="showMsg()">點我</button>
-    <p id="msg"></p>
-  </div>
+<div class="container">
 
-  <script>
-    function showMsg() {
-      document.getElementById("msg").innerText = "你好！這是我的個人履歷";
-    }
-  </script>
+  <section>
+    <h2>關於我</h2>
+    <p>我是一名對人工智慧與資訊傳播領域充滿熱情的學生，擅長跨領域整合、資料分析與內容創作，並具備良好的團隊合作與溝通能力。</p>
+  </section>
+
+  <section>
+    <h2>學歷</h2>
+    <ul>
+      <li>亞洲大學（資訊傳播相關領域）</li>
+      <li>大華高中</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>經歷</h2>
+    <ul>
+      <li>Podcast《欸！你犯法了》製作（企劃、剪輯、主持）</li>
+      <li>YouTube 校園問卷調查與分析</li>
+      <li>排球隊球經（三年經驗，數據分析與管理）</li>
+      <li>英文戲劇比賽（燈光與音效組長）</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>技能</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>資料分析</span>
+      <span>影片剪輯</span>
+      <span>Podcast製作</span>
+      <span>簡報設計</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>專題 / 作品</h2>
+    <ul>
+      <li>小論文：《娼妓業在台北萬華的變遷》</li>
+      <li>AI與YouTube經營模式問卷研究</li>
+    </ul>
+    <button onclick="toggleProjects()">顯示更多</button>
+    <div id="moreProjects" class="hidden">
+      <p>深入探討社會議題與數據分析，並結合傳播與科技應用。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>聯絡方式</h2>
+    <p>Email：example@email.com</p>
+    <p>電話：0912-345-678</p>
+  </section>
+
+</div>
+
+<script>
+  function toggleProjects() {
+    const section = document.getElementById('moreProjects');
+    section.classList.toggle('hidden');
+  }
+</script>
 
 </body>
 </html>
