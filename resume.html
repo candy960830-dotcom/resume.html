@@ -105,10 +105,14 @@
     .hidden {
       display: none;
     }
-
   </style>
 </head>
 <body>
+<!-- test -->
+<!-- 🎵 背景音樂（已修好） -->
+<audio id="bgm" autoplay loop muted>
+  <source src="audio/Untitled.mp3" type="audio/mpeg">
+</audio>
 
 <div class="container">
 
@@ -138,7 +142,6 @@
       </div>
 
     </div>
-
   </div>
 
   <!-- 右側 -->
@@ -185,6 +188,13 @@
     const more = document.getElementById('more');
     more.classList.toggle('hidden');
   }
+
+  // ✅ 點一次頁面 → 開聲音（關鍵修正）
+  window.addEventListener('click', function () {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
 </script>
 
 </body>
