@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人履歷 - 劉祐君</title>
+
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      margin: 0;
+      background: #eef2f7;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .left {
+      width: 32%;
+      background: linear-gradient(180deg, #4facfe, #00c6ff);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 15px;
+    }
+
+    .left h1 {
+      margin: 10px 0 5px;
+    }
+
+    .left p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .skills {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .skill {
+      margin-bottom: 10px;
+    }
+
+    .bar {
+      height: 8px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar div {
+      height: 100%;
+      background: white;
+    }
+
+    .right {
+      width: 68%;
+      padding: 30px;
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      border-left: 6px solid #4facfe;
+      padding-left: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      background: #4facfe;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🎵 背景音樂（已修好） -->
+<audio id="bgm" autoplay loop muted>
+  <source src="audio/Untitled.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+  <!-- 左側 -->
+  <div class="left">
+    <img src="images/photo.jpg" alt="個人照片">
+    <h1>劉祐君</h1>
+    <p>亞洲大學學生</p>
+    <p>學號：114024052</p>
+
+    <div class="skills">
+      <h3>技能</h3>
+
+      <div class="skill">
+        <p>Python</p>
+        <div class="bar"><div style="width:70%"></div></div>
+      </div>
+
+      <div class="skill">
+        <p>資料分析</p>
+        <div class="bar"><div style="width:75%"></div></div>
+      </div>
+
+      <div class="skill">
+        <p>剪輯製作</p>
+        <div class="bar"><div style="width:80%"></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 右側 -->
+  <div class="right">
+
+    <section>
+      <h2>關於我</h2>
+      <p>
+        我對人工智慧與資訊傳播領域充滿熱情，具備跨領域整合能力，能將數據分析與內容創作結合，並善於團隊合作與溝通。
+      </p>
+    </section>
+
+    <section>
+      <h2>學習與經歷</h2>
+      <ul>
+        <li>Podcast《欸！你犯法了》製作（企劃、剪輯、主持）</li>
+        <li>YouTube 校園問卷調查與數據分析</li>
+        <li>排球隊球經（三年數據分析與管理）</li>
+        <li>英文戲劇比賽（燈光與音效組長）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>專題研究</h2>
+      <ul>
+        <li>《娼妓業在台北萬華的變遷》</li>
+        <li>AI 與 YouTube 經營模式問卷分析</li>
+      </ul>
+      <button onclick="toggleMore()">查看更多</button>
+      <p id="more" class="hidden">進一步探討社會議題與科技應用的結合，並進行數據分析與視覺化呈現。</p>
+    </section>
+
+    <section>
+      <h2>聯絡方式</h2>
+      <p>Email：114024052@live.asia.edu.tw</p>
+    </section>
+
+  </div>
+
+</div>
+
+<script>
+  function toggleMore() {
+    const more = document.getElementById('more');
+    more.classList.toggle('hidden');
+  }
+
+  // ✅ 點一次頁面 → 開聲音（關鍵修正）
+  window.addEventListener('click', function () {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+</script>
+
+</body>
+</html>
